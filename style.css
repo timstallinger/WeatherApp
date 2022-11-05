@@ -51,6 +51,11 @@ body {
     width: calc(100% - 100px);
   }
   
+  h2.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
   .flex {
     display: flex;
     align-items: center;
