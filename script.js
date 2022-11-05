@@ -17,7 +17,7 @@ let weather = {
     },
     displayWeather: function (data) {
         // display the weather data on the screen
-        const { name } = data;
+        var { name } = data;
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
@@ -46,5 +46,23 @@ let weather = {
         document.body.style.backgroundImage =
             "url('https://source.unsplash.com/1600x900/?" + name +  "')";
     },
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
+      },
 };
-weather.fetchWeather("Alaska");
+
+
+weather.fetchWeather("Frankfurt");
+
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+  });
+
+
+  document
+  .querySelector(".search-bar")
+  .addEventListener("keyup", function (event) {
+    if (event.key == "Enter") {
+      weather.search();
+    }
+  });
