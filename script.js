@@ -42,6 +42,8 @@ let weather = {
         // make description api readable for background image
         name = name.replace(" ", ",");
 
+        document.querySelector(".wetter").classList.remove("laden");
+
         // set background image according city from unsplash.com
         document.body.style.backgroundImage =
             "url('https://source.unsplash.com/1600x900/?" + name +  "')";

@@ -65,3 +65,19 @@ body {
     text-transform: capitalize;
     margin-left: 8px;
   }
+
+  .wetter.laden {
+    visibility: hidden;
+  }
+
+  .wetter.laden:after {
+    content: 'Lade Wetterdaten...';
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150%;
+    color: white;
+  }
