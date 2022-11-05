@@ -38,11 +38,12 @@ let weather = {
         } else {
             document.querySelector(".current-temp").style.color = "red";
         }
+
+        // finished loading
+        document.querySelector(".wetter").classList.remove("laden");
         
         // make description api readable for background image
         name = name.replace(" ", ",");
-
-        document.querySelector(".wetter").classList.remove("laden");
 
         // set background image according city from unsplash.com
         document.body.style.backgroundImage =
@@ -59,7 +60,6 @@ weather.fetchWeather("Frankfurt");
 document.querySelector(".search button").addEventListener("click", function () {
     weather.search();
   });
-
 
   document
   .querySelector(".search-bar")
