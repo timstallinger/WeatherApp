@@ -42,7 +42,7 @@ let weather = {
         // finished loading
         document.querySelector(".wetter").classList.remove("laden");
         
-        // make description api readable for background image
+        // make name api-readable for background image
         name = name.replace(" ", ",");
 
         // set background image according city from unsplash.com
