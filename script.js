@@ -57,11 +57,10 @@ let weather = {
                 description = "Nebel";
                 break; 
         }
-        console.log(name, icon, description, temp, humidity, speed);
         document.querySelector(".location-place").innerText = "Wetter in " + name;
-        document.querySelector(".location-date").innerText = new Date().toDateString();
-        document.querySelector(".current-weather").innerText = "Beschreibung: " + description;
         document.querySelector(".current-temp").innerText = temp + "°C";
+        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".current-weather").innerText = description;
         document.querySelector(".current-humidity").innerText =
             "Feuchtigkeit: " + humidity + "%";
         document.querySelector(".current-wind").innerText =
@@ -71,7 +70,7 @@ let weather = {
         name = name.replace(" ", ",");
         // set background image according to weather and city from unsplash.com
         document.body.style.backgroundImage =
-            "url('https://source.unsplash.com/1600x900/?" + description +  "')";
+            "url('https://source.unsplash.com/1600x900/?" + name +  "')";
     },
 };
-weather.fetchWeather("Mainz");
+weather.fetchWeather("Frankfurt");
