@@ -3,7 +3,7 @@
 // the background image is changed according to the search location
 
 let weather = {
-    apiKey: "d2de5112c1c920676660f25c783993ff",
+    apiKey: "SECRET",
     fetchWeather: function (city) {
         // fetch weather data from openweathermap.org
         fetch(
