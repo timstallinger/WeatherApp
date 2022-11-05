@@ -38,7 +38,7 @@ let weather = {
         } else {
             document.querySelector(".current-temp").style.color = "red";
         }
-
+        
         // finished loading
         document.querySelector(".wetter").classList.remove("laden");
         
@@ -60,6 +60,7 @@ weather.fetchWeather("Frankfurt");
 document.querySelector(".search button").addEventListener("click", function () {
     weather.search();
   });
+
 
   document
   .querySelector(".search-bar")
