@@ -45,9 +45,10 @@ let weather = {
         // make name api-readable for background image
         name = name.replace(" ", ",");
 
-        // set background image according city from unsplash.com
+        // set background image according to city from unsplash.com
         document.body.style.backgroundImage =
-            "url('https://source.unsplash.com/1600x900/?" + name +  "')";
+            "url('https://source.unsplash.com/" + screen.width + "x" + screen.height + "/?" + name +  "')";
+
     },
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
